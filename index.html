@@ -8,24 +8,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div>
+  <div class="text1">
     <h1>Tic Tac Toe</h1>
+    <h2>Player 1: <span id="player1">O</span></h2>
+    <h2>Player 2 (CPU): <span id="player2">X</span></h2>
+    	<button onClick="startGame()">Restart</button>
   </div>
-  <div class="board" id="board">
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
+  <div class="table">
+    <table>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
   </div>
-  <div class="winning-message" id="winningMessage">
-    <div data-winning-message-text></div>
-    <button id="restartButton">Restart</button>
-  </div>
+  
+  
+	<div class="endgame">
+		<div class="text"></div>
+	</div>
     <script src="script.js"></script>
 </body>
 </html>
