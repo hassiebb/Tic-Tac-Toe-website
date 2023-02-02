@@ -22,7 +22,7 @@ startGame()
 restartButton.addEventListener('click', startGame)
 
 function startGame() {
-  circleTurn = false
+  circleTurn = true
   cellElements.forEach(cell => {
     cell.classList.remove(X_CLASS)
     cell.classList.remove(CIRCLE_CLASS)
@@ -36,6 +36,7 @@ function startGame() {
 function handleClick(e) {
   const cell = e.target
   const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS
+
   placeMark(cell, currentClass)
   if (checkWin(currentClass)) {
     endGame(false)
@@ -43,7 +44,24 @@ function handleClick(e) {
     endGame(true)
   } else {
     swapTurns()
-    setBoardHoverClass()
+
+    if (!circleTurn) {
+      // AI's turn
+      let emptyCells = [...cellElements].filter(cell => !cell.classList.contains(X_CLASS) && !cell.classList.contains(CIRCLE_CLASS))
+      let randomIndex = Math.floor(Math.random() * emptyCells.length)
+      placeMark(emptyCells[randomIndex], X_CLASS)
+      
+      if (checkWin(X_CLASS)) {
+        endGame(false)
+      } else if (isDraw()) {
+        endGame(true)
+      } else {
+        swapTurns()
+        setBoardHoverClass()
+      }
+    } else {
+      setBoardHoverClass()
+    }
   }
 }
 
