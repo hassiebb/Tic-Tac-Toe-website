@@ -220,7 +220,8 @@ p{
     zoom: 0.7;
   }
   .text1{
-    top: 90%;
+    zoom: 0.9;
+    top: 80%;
     width: 65rem;
     height: 15rem;
   }
@@ -229,7 +230,7 @@ p{
     top: 5%;
   }
   .table{
-    zoom: 1.5;
+    zoom: 1.4;
   }
 }
 
