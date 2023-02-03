@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Finger Paint', cursive;
-
 }
 
 :root {
@@ -121,12 +120,40 @@ button:hover {
     transform: translateY(-5px);
 }
 
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding:10px;
+  color: var(--orange);
+  font-size: 20px;
+}
+p{
+  padding: 20px;
+}
 
+.footer__social{
+  display: flex;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+ 
+}
 
+.footer__social-link{
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 1.25rem;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
 
-
-
-
+.footer__social-link:hover{
+  color: var(--orange);
+  transition: 0.3s;
+}
 
 
 
