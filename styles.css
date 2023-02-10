@@ -155,7 +155,13 @@ p{
   transition: 0.3s;
 }
 
-
+#preloader{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #fd4b4b url(loading.gif) no-repeat center center;
+  z-index: 999;
+}
 
 
 

@@ -138,3 +138,9 @@ function minimax(newBoard, player) {
 
 	return moves[bestMove];
 }
+
+
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+	  loader.style.display = "none";
+});
