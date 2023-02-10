@@ -140,7 +140,6 @@ function minimax(newBoard, player) {
 }
 
 
-var loader = document.getElementById("preloader");
-window.addEventListener("load", function(){
-	  loader.style.display = "none";
+window.addEventListener('load', () => {
+	document.querySelector('.preloader').classList.add('preloader--hidden');
 });

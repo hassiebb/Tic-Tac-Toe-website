@@ -155,15 +155,19 @@ p{
   transition: 0.3s;
 }
 
-#preloader{
+.preloader{
   position: fixed;
   height: 100%;
   width: 100%;
   background: #fd4b4b url(loading.gif) no-repeat center center;
   z-index: 999;
+  transition: opacity 5s, visibility 5s ;
 }
 
-
+.preloader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
 
 @media screen and (min-width: 320px) {
   body{
