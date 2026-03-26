@@ -10,66 +10,69 @@
 	<link rel="icon" href="logo.png">
 </head>
 <body>
-	<div class="preloader"></div>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
+    <main class="app-container">
+        <header class="header">
+            <h1 class="title">Tic Tac Toe</h1>
+            <p class="subtitle">Beat the Unbeatable AI</p>
+        </header>
 
-  <div class="text1">
-    <h1>Tic Tac Toe</h1>
-    <h2>Player 1: <span id="player1">O</span></h2>
-    <h2>Player 2 (AI): <span id="player2">X</span></h2>
-    	<button onClick="startGame()">Restart</button>
-  </div>
-  <div class="table">
-    <table>
-		<tr>
-			<td class="cell" id="0"></td>
-			<td class="cell" id="1"></td>
-			<td class="cell" id="2"></td>
-		</tr>
-		<tr>
-			<td class="cell" id="3"></td>
-			<td class="cell" id="4"></td>
-			<td class="cell" id="5"></td>
-		</tr>
-		<tr>
-			<td class="cell" id="6"></td>
-			<td class="cell" id="7"></td>
-			<td class="cell" id="8"></td>
-		</tr>
-	</table>
-  </div>
-  
-  
-	<div class="endgame">
-		<div class="text"></div>
-	</div>
+        <section class="game-info">
+            <div class="player-card" id="card-p1">
+                <span class="player-label">Player 1</span>
+                <span class="player-mark">O</span>
+            </div>
+            <div class="vs">VS</div>
+            <div class="player-card" id="card-p2">
+                <span class="player-label">AI (Minimax)</span>
+                <span class="player-mark">X</span>
+            </div>
+        </section>
 
-	<footer>
-	<p>©2023 Mohammad Hassieb. All rights reserved.</p>
-	<ul class="footer__social">
-		
-		<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="mohammadhassieb" data-color="#000000" data-emoji=""  data-font="Arial" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>  
-		
-	  <a href="https://www.facebook.com/mohamed.hassieb.1/" target="_blank" class="footer__social-link">
-		<i class="ri-facebook-fill"></i>
-	  </a>
-	  <a href="https://www.instagram.com/mhassieb_/" target="_blank" class="footer__social-link">
-		<i class="ri-instagram-fill"></i>
-	  </a>
-		<a href="https://www.youtube.com/"target="_blank" class="footer__social-link">
-			<i class="ri-youtube-fill"></i>
-		</a>
-		<a href="https://wa.link/fthmku"target="_blank" class="footer__social-link">
-			<i class="ri-whatsapp-fill"></i>
-		</a>
-		<a href="https://github.com/hassiebb"target="_blank" class="footer__social-link">
-			<i class="ri-github-fill"></i>
-		</a>
-		<a href="https://www.linkedin.com/in/mo-hassieb/"target="_blank" class="footer__social-link">
-			<i class="ri-linkedin-fill"></i>
-		</a>
-	  </ul>
-</footer>
+        <section class="board-container">
+            <div class="board" id="board">
+                <div class="cell" id="0"></div>
+                <div class="cell" id="1"></div>
+                <div class="cell" id="2"></div>
+                <div class="cell" id="3"></div>
+                <div class="cell" id="4"></div>
+                <div class="cell" id="5"></div>
+                <div class="cell" id="6"></div>
+                <div class="cell" id="7"></div>
+                <div class="cell" id="8"></div>
+            </div>
+        </section>
+
+        <section class="controls">
+            <button class="btn-restart" id="restart-btn" onClick="startGame()">
+                <i class="ri-refresh-line"></i> Restart Game
+            </button>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="endgame-modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Game Over</h2>
+            <p class="modal-text" id="winner-text"></p>
+            <button class="btn-primary" onClick="startGame()">Play Again</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Mohammad Hassieb. Modernized for Showcase.</p>
+            <div class="social-links">
+                <a href="https://github.com/hassiebb" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+                <a href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://wa.link/fthmku" target="_blank" title="WhatsApp"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
